@@ -1,13 +1,19 @@
-# pip install cryptography 
-# pip install password_utils
+# pip install cryptography
 from cryptography.fernet import Fernet
-import encrpt_password
-
+from password_utils import encrypt_password
 
 def generate_key():
-    pass
+    key = Fernet.generate_key()
+    with open('secret.key','wb') as file:
+        file.write(key)
+    print("✅ Secret Key saved.")
     
 
 
 if __name__ == '__main__':
-    generate_key()
+    # Uncomment it while running for first time 
+    #generate_key()
+    
+    encrypted = encrypt_password('root')
+    print('✅ Password Encrypted.')
+    print(encrypted)

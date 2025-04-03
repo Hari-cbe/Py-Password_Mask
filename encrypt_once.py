@@ -12,8 +12,8 @@ def generate_key():
 
 if __name__ == '__main__':
     # Uncomment it while running for first time 
-    #generate_key()
+    generate_key()
     
-    encrypted = encrypt_password('root')
-    print('✅ Password Encrypted.')
-    print(encrypted)
+    # encrypted = encrypt_password('root')
+    # print('✅ Password Encrypted.')
+    # print(encrypted)
